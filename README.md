@@ -217,10 +217,10 @@ Test all endpoints
 Using cURL
 bash
 # Health check
-curl https://social-feed-api-vg44.onrender.com/health
+curl http://localhost:3000/health
 
 # Register user
-curl https://social-feed-api-vg44.onrender.com/api/auth/register
+curl -X POST http://localhost:3000/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"username":"test","email":"test@test.com","password":"pass123"}'
 
