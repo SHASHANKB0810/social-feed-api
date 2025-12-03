@@ -2,6 +2,8 @@
 
 A complete social media activity feed system with proper role-based permissions (User, Admin, Owner). Built as a backend assignment with Node.js, Express, and MongoDB.
 
+Deployment link : https://social-feed-api-vg44.onrender.com
+
 ## 🌟 Features
 
 ### Core Features
@@ -26,41 +28,6 @@ A complete social media activity feed system with proper role-based permissions 
 - **Security**: Helmet, CORS, environment variables
 - **Logging**: Morgan HTTP request logger
 
-## 📁 Project Structure
-social-feed-api/
-├── src/
-│ ├── config/
-│ │ └── database.js # MongoDB connection
-│ ├── models/
-│ │ ├── User.js # User schema
-│ │ ├── Post.js # Post schema
-│ │ ├── Like.js # Like schema
-│ │ ├── Follow.js # Follow schema
-│ │ ├── Block.js # Block schema
-│ │ └── Activity.js # Activity feed schema
-│ ├── middleware/
-│ │ ├── auth.js # JWT authentication
-│ │ └── permissions.js # Role-based access control
-│ ├── controllers/
-│ │ ├── authController.js # Auth operations
-│ │ ├── userController.js # User operations
-│ │ ├── postController.js # Post operations
-│ │ ├── feedController.js # Feed operations
-│ │ └── adminController.js # Admin operations
-│ ├── routes/
-│ │ ├── auth.js # Auth routes
-│ │ ├── users.js # User routes
-│ │ ├── posts.js # Post routes
-│ │ ├── feed.js # Feed routes
-│ │ └── admin.js # Admin routes
-│ └── app.js # Express app configuration
-├── .env # Environment variables
-├── .env.example # Environment template
-├── package.json # Dependencies
-├── server.js # Server entry point
-└── README.md # This file
-
-text
 
 ## 🚀 Quick Start
 
@@ -176,6 +143,8 @@ Get Activity Feed
 http
 GET /api/feed
 Authorization: Bearer <jwt_token>
+
+
 Response Example:
 
 json
@@ -230,21 +199,7 @@ Make User Admin (Owner only)
 http
 POST /api/admin/users/:id/make-admin
 Authorization: Bearer <owner_token>
-🔐 Permission Matrix
-Action	User	Admin	Owner
-Create Account	✅	✅	✅
-Login	✅	✅	✅
-Create Post	✅	✅	✅
-Delete Own Post	✅	✅	✅
-Delete Any Post	❌	✅	✅
-Like/Unlike Post	✅	✅	✅
-Follow/Unfollow	✅	✅	✅
-Block/Unblock	✅	✅	✅
-View Activity Feed	✅	✅	✅
-View All Users	❌	✅	✅
-Delete Any User	❌	❌	✅
-Make/Remove Admin	❌	❌	✅
-View Statistics	❌	✅	✅
+
 🧪 Testing the API
 Using Postman
 Import the provided social-feed-api.postman_collection.json
@@ -262,10 +217,10 @@ Test all endpoints
 Using cURL
 bash
 # Health check
-curl http://localhost:3000/health
+curl https://social-feed-api-vg44.onrender.com/health
 
 # Register user
-curl -X POST http://localhost:3000/api/auth/register \
+curl https://social-feed-api-vg44.onrender.com/api/auth/register
   -H "Content-Type: application/json" \
   -d '{"username":"test","email":"test@test.com","password":"pass123"}'
 
@@ -303,7 +258,7 @@ javascript
   createdAt: Date
 }
 🚢 Deployment
-Option 1: Render (Recommended - Free Tier)
+Render (Recommended - Free Tier)
 Push code to GitHub
 
 Sign up at render.com
@@ -311,17 +266,6 @@ Sign up at render.com
 Create new Web Service
 
 Connect GitHub repository
-
-Add environment variables
-
-Deploy
-
-Option 2: Railway
-Push code to GitHub
-
-Sign up at railway.app
-
-New Project → Deploy from GitHub
 
 Add environment variables
 
@@ -349,11 +293,11 @@ Open a Pull Request
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 👨‍💻 Author
-[Your Name]
+SHASHANK R BELLAD
 
-GitHub: @yourusername
+GitHub: @SHASHANKB0810
 
-Email: your.email@example.com
+Email: shashankbellad0810@gmail.com
 
 🙏 Acknowledgments
 Inkle for the assignment
